@@ -14,8 +14,8 @@ from datetime import datetime
 from typing import Dict, Optional, Tuple
 
 try:
-from scapy.all import sniff, TCP, Raw
-from scapy.layers.http import HTTPRequest
+    from scapy.all import sniff, TCP, Raw
+    from scapy.layers.http import HTTPRequest
     SCAPY_AVAILABLE = True
 except ImportError as e:
     SCAPY_AVAILABLE = False
@@ -168,7 +168,7 @@ class PacketProcessor:
         except Exception as e:
             logger.debug(f"Error extracting token info: {e}")
             return None, None, None
-
+    
     def process_packet(self, packet) -> None:
         """Process individual packet with comprehensive error handling"""
         try:
@@ -181,7 +181,7 @@ class PacketProcessor:
                 src_ip, token, user_agent = self.extract_token_info(packet)
                 if token:
                     self.session_tracker.detect_anomaly(src_ip, token, user_agent)
-                
+        
         except Exception as e:
             logger.error(f"Error processing packet: {e}")
     
@@ -366,7 +366,7 @@ Examples:
             while not stop_event.is_set():
                 import time
                 time.sleep(1)
-    except KeyboardInterrupt:
+        except KeyboardInterrupt:
             logger.info("Received keyboard interrupt")
         finally:
             monitor.stop_monitoring()
