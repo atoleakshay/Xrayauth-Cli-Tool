@@ -16,7 +16,7 @@ A lightweight session hijack detection tool that monitors HTTP traffic for suspi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/xrayauth.git
+git clone https://github.com/atoleakshay/xrayauth.git
 cd xrayauth
 
 # Install dependencies
@@ -67,7 +67,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Issues & Support
 
-Found a bug? Want a feature? [Open an issue](https://github.com/yourusername/xrayauth/issues)!
+Found a bug? Want a feature? [Open an issue](https://github.com/atoleakshay/Xrayauth-Cli-Tool/issues)!
 
 ---
 
